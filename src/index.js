@@ -1,10 +1,15 @@
 import "./style.css";
-import scrollToNearestPicture from "./background-scroll.js";
+import { hoverEffect, removeHoverEffect } from "./header-hover";
 
-// let isScrolling;
-// window.addEventListener("scroll", () => {
-//   clearTimeout(isScrolling);
-//   isScrolling = setTimeout(() => {
-//     scrollToNearestPicture();
-//   }, 500);
-// });
+const header = document.querySelector("header");
+header.addEventListener("mouseover", (e) => {
+  if (e.target.classList.contains("hoverItem")) {
+    hoverEffect(e);
+  }
+});
+const container = document.querySelector(".container");
+header.addEventListener("mouseleave", (e) => {
+  console.log(e.target);
+  console.log("leave");
+  //   removeHoverEffect();
+});
