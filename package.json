@@ -1,0 +1,24 @@
+{
+  "name": "tesla_webpage_copy",
+  "version": "1.0.0",
+  "description": "This is just a basic copy of the exterior functionality of the Tesla homepage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oll310e/Tesla_webpage_copy.git"
+  },
+  "author": "Oliver",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oll310e/Tesla_webpage_copy/issues"
+  },
+  "homepage": "https://github.com/oll310e/Tesla_webpage_copy#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "style-loader": "^3.3.1",
+    "webpack-cli": "^5.0.1"
+  }
+}

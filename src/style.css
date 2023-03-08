@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  scroll-snap-align: center;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+.container > div {
+  scroll-snap-align: center;
+  /* width: 100%; */
+
+  height: 100vh;
+  min-height: 400px;
+}
+
+.container > div > img {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: calc(100% - 15px);
+}
+
+header > ul {
+  display: flex;
+}
