@@ -2,23 +2,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 .container {
-  height: 100vh;
-  width: 100%;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  overflow-y: scroll;
+  /* height: 100vh;
+  width: 100%; */
 }
 
-.container > div:not(.hoverBar) {
+.scrollSnap {
   scroll-snap-align: center;
   height: 100vh;
   min-height: 400px;
 }
 
-.container > div > img {
+.container > .scrollSnap > img {
   object-fit: cover;
   height: 100%;
   width: 100%;
@@ -27,7 +30,7 @@
 header {
   display: grid;
   grid-template-columns: 1fr 500px 1fr;
-  position: absolute;
+  position: fixed;
   width: calc(100% - 15px);
   padding: 20px;
   align-items: center;
@@ -65,6 +68,36 @@ header > ul > li > a {
   border-radius: 5px;
 }
 
-#Textover {
-  position: absolute;
+.Textover {
+  position: fixed;
+  width: 80%;
+  height: 65%;
+  left: 10%;
+  top: 20%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  gap: 100%;
+  flex-direction: column;
+  letter-spacing: 1px;
+}
+
+#Textmodel {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+#Textinfo {
+  font-size: 15px;
+}
+
+.Textlink {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1200px) {
+  header > .modelList,
+  header > .supportList {
+    display: none;
+  }
 }
